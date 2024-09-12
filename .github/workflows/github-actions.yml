@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TEST_BASE_URL: https://www.josa.ngo
+      TEST_BASE_URL: https://www.josa.ngo/
       SELENIUM_HOST: http://localhost:4444/wd/hub
 
     steps:

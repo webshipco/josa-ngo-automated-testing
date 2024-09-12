@@ -22,10 +22,14 @@ Feature: Check the contact page
       And I should see "Whoever you are, whether you are happy or unhappy about any aspect of our activity or work, we value you feedback."
       And I should see "If you have a comment or complaint, please fill in our online feedback form below."
       And I should see "What is your feedback or inquiry about?"
-     When I fill in "#subject" with "Title Subject"
+     When I wait 5 seconds
+      And I fill in "#subject" with "Title Subject" by attribute
      Then I should see "Please describe it in details."
-     When I fill in "#inquiry" with "Your Question"
+     When I wait 5 seconds
+      And I fill in "#inquiry" with "Your Question" by attribute
      Then I should see "Your Name"
-     When I fill in "#name" with "Enter Your Name"
+     When I wait 5 seconds
+      And I fill in "#name" with "Enter Your Name" by attribute
      Then I should see "Your Email"
-     When I fill in "#email" with "Enter Your Email"
+     When I wait 5 seconds
+      And I fill in "#email" with "Enter Your Email" by attribute

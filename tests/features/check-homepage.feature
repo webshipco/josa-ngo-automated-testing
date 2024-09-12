@@ -55,18 +55,21 @@ Feature: Check the home page
     
   Scenario: Check Research and Publications info
     Given I am on the homepage
-    Then I should see "Research and Publications"
-     And I should see "Research Papers"
-     And I should see "Technology Facilitated Gender Based Violence Legislative Mapping"
-     And I should see "Guides"
-     And I should see "Digital Security Toolkit for Human Rights Defenders"
-    When I click "Technology Facilitated Gender Based Violence Legislative Mapping"
-    Then I should see "Technology Facilitated Gender Based Violence Legislative Mapping"
-     And I should see "By Fatima Mohammad Alkhadire"
-    When I move backward one page
-    When I click "Digital Security Toolkit for Human Rights Defenders"
-    Then I should see "Digital Security Toolkit for Human Rights Defenders"
-     And I should see "By AmanRaqami - Jordan Open Source Association (JOSA)"
+     Then I should see "Research and Publications"
+      And I should see "Research Papers"
+      And I should see "Technology Facilitated Gender Based Violence Legislative Mapping"
+      And I should see "Guides"
+      And I should see "Digital Security Toolkit for Human Rights Defenders"
+     When I wait 5 seconds
+      And I click "Technology Facilitated Gender Based Violence Legislative Mapping"
+     Then I should see "Technology Facilitated Gender Based Violence Legislative Mapping"
+      And I should see "By Fatima Mohammad Alkhadire"
+     When I wait 5 seconds
+      And I move backward one page
+      And I wait 5 seconds
+      And I click "Digital Security Toolkit for Human Rights Defenders"
+     Then I should see "Digital Security Toolkit for Human Rights Defenders"
+      And I should see "By AmanRaqami - Jordan Open Source Association (JOSA)"
 
   Scenario: Check Join Us
     Given I am on the homepage
@@ -74,6 +77,11 @@ Feature: Check the home page
       And I should see "Our community is built by JOSAns, formidable members who own diverse skills, interests and experiences, all working for an open-technology, digitally-enabled Jordan."
       And I should see "Become a Member"
      When I click "Digital Security Toolkit for Human Rights Defenders"
-     Then I should see "WeLoveour community"
-      And I should see "The JOSA's community is made by the efforts of members like you!"
-      And I should see "Join JOSA to not only develop soft and organizational skills, but become part of a dynamic and exceptional network of geeks and agents of change by giving back to the community."
+      And I wait 5 seconds
+     Then I should see "The Digital Security Toolkit for Human Rights Defenders offers user-friendly steps to safeguard online accounts and communications, specifically designed for human rights defenders in the MENA region. The toolkit provides step-by-step checklists to:"
+      And I should see "Secure Your Accounts"
+      And I should see "Protect Online Privacy"
+      And I should see "Communicate Safely"
+      And I should see "Report Account Issues"
+      And I should see "Protect Yourself in Crises"
+      And I should see "Seek Additional Help"

@@ -12,5 +12,4 @@ Feature: Check the blog page
       And I should see "Op-Eds from JOSA's Community"
       And I should see "Community Bulletins"
 
-  Scenario: Check blog
-    Given I am on "/blog"
+  

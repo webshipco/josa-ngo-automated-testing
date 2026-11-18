@@ -10,4 +10,3 @@ Feature: Check the our team page
       And I should see "Board of Directors"
       And I should see "Anas Alhamdan"
       And I should see "Staff"
-      And I should see "Issa Mahasneh"

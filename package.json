@@ -1,17 +1,25 @@
 {
-  "name": "project-name",
-  "version": "1.0.3",
-  "description": "",
-  "main": "index.js",
-  "author": "",
+  "name": "josa-ngo-automated-testing",
+  "version": "2.0.0",
+  "description": "Testing the public pages of https://www.josa.ngo as an anonymous visitor with webship-js.",
+  "private": true,
   "license": "MIT",
-  "private": false,
-  "scripts": {
-    "test": "nightwatch --format @cucumber/pretty-formatter --format-options '{\"colorsEnabled\": true}' --format-options '{\"theme\": {\"feature keyword\":[\"bold\",\"blue\"],\"feature name\":[\"blue\",\"underline\"],\"feature description\":[\"blueBright\"],\"scenario keyword\":[\"bold\",\"magenta\"],\"scenario name\":[\"magenta\",\"underline\"],\"step keyword\":[\"bold\",\"green\"],\"step text\":[\"greenBright\",\"italic\"]}}'  --format json:./tests/reports/cucumber_report.json; node generate-reports.js"
+  "author": "Webship.co",
+  "homepage": "https://github.com/webshipco/josa-ngo-automated-testing",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webshipco/josa-ngo-automated-testing.git"
   },
-  
-  "homepage": "https://github.com/webship/webship-js",
-  "dependencies": {
-    "webship-js": "~1.0.0"
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry-run": "cucumber-js --config cucumber.js --dry-run",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports"
+  },
+  "devDependencies": {
+    "webship-js": "^2.0.13"
   }
 }

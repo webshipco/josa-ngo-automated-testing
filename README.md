@@ -23,4 +23,4 @@ At the end of a run the HTML report is in `tests/reports/`, and a screenshot of 
 
 ## CI
 
-GitHub Actions runs the suite on every push and pull request to `main`, and by hand (`.github/workflows/github-actions.yml`): one run at a time against the live site, with the reports kept for 14 days.
+GitHub Actions is the only CI. It runs the suite on every push and pull request to `main`, and by hand (`.github/workflows/github-actions.yml`): one run at a time against the live site, with the reports kept for 14 days.
